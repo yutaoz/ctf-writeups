@@ -9,7 +9,7 @@ For this challenge, we are just given a binary ```taco_shop```
 To start, I just checked the binary with ```file taco_shop``` -> Looks like it's just a regular 64-bit ELF.
 
 Running the bin, we get this:
-![alt text](image.png)
+![alt text](tacotime/image.png)
 
 I'm a spice fan so I go for the "Spicy Regret," but regardless of input I seem to get the same output:
 
@@ -23,12 +23,12 @@ Decoding this base64 string we get ```PWNSEC{notheflag}``` - probably not the fl
 Something to note, we also see that the file was packed with upx - so we try unpacking with upx.
 
 This fails, with the error l_info corrupted - this suggests that maybe the header is corrupt. Throwing this into hexview, we see after the ELF header:
-![alt text](image-2.png)
+![alt text](tacotime/image-2.png)
 
 So it looks like our typical UPX header isn't there. We pop open hexedit and change the byte after upx to ! and pray that nothing else needs to be repaired...
 
 And boom! We can unpack the binary now. We run ```strings``` again, and this time, we get
-![alt text](image-3.png)
+![alt text](tacotime/image-3.png)
 
 Interesting, but none of them are the real flag, just a lot of scams >:(
 
