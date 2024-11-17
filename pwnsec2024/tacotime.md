@@ -9,6 +9,7 @@ For this challenge, we are just given a binary ```taco_shop```
 To start, I just checked the binary with ```file taco_shop``` -> Looks like it's just a regular 64-bit ELF.
 
 Running the bin, we get this:
+
 ![alt text](tacotime/image.png)
 
 I'm a spice fan so I go for the "Spicy Regret," but regardless of input I seem to get the same output:
