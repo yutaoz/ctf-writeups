@@ -24,6 +24,7 @@ Decoding this base64 string we get ```PWNSEC{notheflag}``` - probably not the fl
 Something to note, we also see that the file was packed with upx - so we try unpacking with upx.
 
 This fails, with the error l_info corrupted - this suggests that maybe the header is corrupt. Throwing this into hexview, we see after the ELF header:
+
 ![alt text](tacotime/image-2.png)
 
 So it looks like our typical UPX header isn't there. We pop open hexedit and change the byte after upx to ! and pray that nothing else needs to be repaired...
