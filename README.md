@@ -1,3 +1,3 @@
-# Writeups for ctfs participated
+# Writeups for ctfs
 
 Currently on #2humble
